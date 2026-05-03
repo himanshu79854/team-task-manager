@@ -4,7 +4,6 @@ const instance = axios.create({
   baseURL: "https://team-task-manager-production-d07f.up.railway.app/api"
 });
 
-// attach token automatically
 instance.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token) {
